@@ -6,7 +6,7 @@ ond only download the file externally if it isn't, thereby drastically speeding 
 
 A few tweaks enable this proxy to download Java files from Oracle.
 
-Other Vagrant images that we uses may automatically configure if one is detected on port 3142.
+Other Vagrant images that we use may automatically configure a proxy if one is detected on port 3142 during provisioning.
 
 To configure the proxy manually, create a file in `/etc/apt/apt.conf.d/`, e.g. `01proxy`, with the following content:
 
