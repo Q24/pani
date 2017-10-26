@@ -12,8 +12,8 @@ Vagrant.configure("2") do |config|
 
   # Every Vagrant development environment requires a box. You can search for
   # boxes at https://atlas.hashicorp.com/search.
-  config.vm.box = "bento/debian-8.6"
-  config.vm.box_version = "2.3.1"
+  config.vm.box = "elastic/ubuntu-16.04-x86_64"
+  config.vm.box_version = "20171015.1.0"
   config.vm.hostname = "pani"
 
   # Disable automatic box update checking. If you disable this, then
