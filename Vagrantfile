@@ -56,6 +56,13 @@ Vagrant.configure("2") do |config|
     vb.cpus = 1
     vb.name = "pani"
   end
+  config.vm.provider "libvirt" do |vm|
+    # Customize the amount of memory on the VM:
+    vm.memory = "512"
+    vm.cpus = 1
+    vm.autostart = true
+  end
+
   #
   # View the documentation for the provider you are using for more
   # information on available options.
