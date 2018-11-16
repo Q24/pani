@@ -54,7 +54,7 @@ Vagrant.configure("2") do |config|
     vb.gui = false
 
     # Disables the audio in the virtualbox
-    vb.customize [ “modifyvm”, :id, “--audio”, “null”, “--audioin”, “off”, “--audioout”, “off”]
+    vb.customize [ "modifyvm", :id, "--audio", "null", "--audioin", "off", "--audioout", "off"]
 
     vb.memory = "512"
     vb.cpus = 1
