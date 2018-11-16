@@ -41,17 +41,21 @@ Vagrant.configure("2") do |config|
   # argument is a set of non-required options.
   config.vm.synced_folder "installers", "/installers"
   #config.vm.synced_folder "../workspace", "/opt/hawaii/workspace"
-  
+
   # Expose apt-proxy port
   config.vm.network "forwarded_port", guest: 3142, host: 3142
- 
+
   # Provider-specific configuration so you can fine-tune various
   # backing providers for Vagrant. These expose provider-specific options.
   # Example for VirtualBox:
   #
   config.vm.provider "virtualbox" do |vb|
-  #   # Display the VirtualBox GUI when booting the machine
+    # Hide the display (VirtualBox GUI) when booting the machine
     vb.gui = false
+
+    # Disables the audio in the virtualbox
+    vb.customize [ “modifyvm”, :id, “--audio”, “null”, “--audioin”, “off”, “--audioout”, “off”]
+
     vb.memory = "512"
     vb.cpus = 1
     vb.name = "pani"
