@@ -9,7 +9,7 @@ echo "Acquire::http::proxy \"http://localhost:3142\";" > /etc/apt/apt.conf.d/01p
 
 echo "RequestAppendix: Cookie: oraclelicense=a" >>  /etc/apt-cacher-ng/acng.conf
 echo "PfilePatternEx: (/dists/.*/by-hash/.*|\.yml)$" >>  /etc/apt-cacher-ng/acng.conf
-echo "PassThroughPattern: (download.docker.com:443)$" >> /etc/apt-cacher-ng/acng.conf
+echo "PassThroughPattern: (download.docker.com:443|packages.confluent.io)$" >> /etc/apt-cacher-ng/acng.conf
 
 service apt-cacher-ng start
 
